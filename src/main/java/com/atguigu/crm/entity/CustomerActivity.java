@@ -4,7 +4,7 @@ import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-public class CustomerActivity extends IdEntity{
+public class CustomerActivity extends BaseIdEntity {
 
 	private Customer customer;
 	@DateTimeFormat(pattern="yyyy-MM-dd")

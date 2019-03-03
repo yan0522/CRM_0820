@@ -4,42 +4,68 @@ import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-public class CustomerService extends IdEntity {
+public class CustomerService extends BaseIdEntity {
 
-	// 服务类型
+	/**
+	 * 服务类型
+	 */
 	private String serviceType;
-	// 服务概要
+	/**
+	 * 服务概要
+	 */
 	private String serviceTitle;
 
-	// 服务客户
+	/**
+	 * 服务客户
+	 */
 	private Customer customer;
-	// 服务状态
+	/**
+	 * 服务状态
+	 */
 	private String serviceState;
 
-	// 服务请求
+	/**
+	 * 服务请求
+	 */
 	private String serviceRequest;
 
-	// 服务创建人
+	/**
+	 * 服务创建人
+	 */
 	private User createdby;
-	// 服务创建时间
+	/**
+	 * 服务创建时间
+	 */
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date createDate;
 
-	// 分配人
+	/**
+	 * 分配人
+	 */
 	private User allotTo;
-	// 分配时间
+	/**
+	 * 分配时间
+	 */
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date allotDate;
 
-	// 服务处理
+	/**
+	 * 服务处理
+	 */
 	private String serviceDeal;
-	// 处理时间
+	/**
+	 * 处理时间
+	 */
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date dealDate;
 
-	// 处理结果
+	/**
+	 * 处理结果
+	 */
 	private String dealResult;
-	// 客户满意度
+	/**
+	 * 客户满意度
+	 */
 	private String satisfy;
 
 	public String getServiceType() {

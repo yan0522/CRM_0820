@@ -4,16 +4,20 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class User extends IdEntity implements Serializable {
+public class User extends BaseIdEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private String password;
 
 	private int enabled;
-	// 盐值, 进行密码加密
+	/**
+	 * 盐值, 进行密码加密
+	 */
 	private String salt;
-	// 该用户拥有的角色
+	/**
+	 * 该用户拥有的角色
+	 */
 	private Role role;
 
 	public User() {

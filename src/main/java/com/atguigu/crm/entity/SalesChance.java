@@ -6,42 +6,68 @@ import java.util.Set;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-public class SalesChance extends IdEntity {
+public class SalesChance extends BaseIdEntity {
 
-	// 机会来源
+	/**
+	 * 机会来源
+	 */
 	private String source;
-	// 客户名称
+	/**
+	 * 客户名称
+	 */
 	private String custName;
 
-	// 概要
+	/**
+	 * 概要
+	 */
 	private String title;
-	// 成功几率
+	/**
+	 * 成功几率
+	 */
 	private Long rate;
 
-	// 联系人
+	/**
+	 * 联系人
+	 */
 	private String contact;
-	// 联系人电话
+	/**
+	 * 联系人电话
+	 */
 	private String contactTel;
 
-	// 机会描述
+	/**
+	 * 机会描述
+	 */
 	private String description;
-	// 创建人
+	/**
+	 * 创建人
+	 */
 	private User createBy;
 
 	// <input type="hidden" name="createBy.id" value="${sessionScope.user.id}"/>
-	
-	// 创建时间
+
+	/**
+	 * 创建时间
+	 */
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date createDate;
-	// 指派人
+	/**
+	 * 指派人
+	 */
 	private User designee;
 
-	// 销售机会的状态: 1 才被创建; 2. 执行中; 3 转换为客户; 4 转换失败
+	/**
+	 * 销售机会的状态: 1 才被创建; 2. 执行中; 3 转换为客户; 4 转换失败
+	 */
 	private Integer status;
-	// 销售计划
+	/**
+	 * 销售计划
+	 */
 	private Set<SalesPlan> salesPlans = new HashSet<>();
-	
-	// 指派时间
+
+	/**
+	 * 指派时间
+	 */
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date designeeDate;
 

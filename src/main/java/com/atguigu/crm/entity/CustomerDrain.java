@@ -2,7 +2,7 @@ package com.atguigu.crm.entity;
 
 import java.util.Date;
 
-public class CustomerDrain extends IdEntity {
+public class CustomerDrain extends BaseIdEntity {
 
 	private Customer customer;
 

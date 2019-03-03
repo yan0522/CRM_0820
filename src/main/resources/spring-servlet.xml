@@ -24,12 +24,14 @@
 
 	<mvc:default-servlet-handler />
 	<mvc:annotation-driven />
-	
+	<!--
 	<mvc:view-controller path="/index" view-name="home/index" />
 	<mvc:view-controller path="/header" view-name="home/header" />
 	<mvc:view-controller path="/footer" view-name="home/footer" />
 	<mvc:view-controller path="/menu" view-name="home/menu" />
 	<mvc:view-controller path="/welcome" view-name="home/welcome" />
+	-->
+
 
 
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">

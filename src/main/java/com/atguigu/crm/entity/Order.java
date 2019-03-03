@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Order extends IdEntity {
+public class Order extends BaseIdEntity {
 	private String no;
 	private Customer customer;
 	private Date date;

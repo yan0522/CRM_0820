@@ -1,7 +1,7 @@
 package com.atguigu.crm.entity;
 
 
-public class OrderItem extends IdEntity {
+public class OrderItem extends BaseIdEntity {
 
 	private Order order;
 	private Product product;

@@ -1,19 +1,29 @@
 package com.atguigu.crm.entity;
 
 
-public class Storage extends IdEntity{
+public class Storage extends BaseIdEntity {
 
-	//所属商品
+	/**
+	 * 所属商品
+	 */
 	private Product product;
-	//仓库
+	/**
+	 * 仓库
+	 */
 	private String wareHouse;
-	
-	//库位
+
+	/**
+	 * 库位
+	 */
 	private String stockWare;
-	//数量
+	/**
+	 * 数量
+	 */
 	private Integer stockCount;
-	
-	//备注
+
+	/**
+	 * 备注
+	 */
 	private String memo;
 
 	public Product getProduct() {

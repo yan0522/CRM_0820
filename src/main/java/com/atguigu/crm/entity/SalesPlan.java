@@ -4,16 +4,24 @@ import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-public class SalesPlan extends IdEntity {
+public class SalesPlan extends BaseIdEntity {
 
-	// 计划实施的时间
+	/**
+	 * 计划实施的时间
+	 */
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date date;
-	// 计划怎么做
+	/**
+	 * 计划怎么做
+	 */
 	private String todo;
-	// 计划的执行结果
+	/**
+	 * 计划的执行结果
+	 */
 	private String result;
-	// 对应的销售机会
+	/**
+	 * 对应的销售机会
+	 */
 	private SalesChance chance;
 
 	public Date getDate() {

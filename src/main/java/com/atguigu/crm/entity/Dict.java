@@ -1,7 +1,7 @@
 package com.atguigu.crm.entity;
 
 
-public class Dict extends IdEntity {
+public class Dict extends BaseIdEntity {
 
 	private String type;
 	private String item;

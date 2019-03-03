@@ -1,24 +1,38 @@
 package com.atguigu.crm.entity;
 
 
-public class Contact extends IdEntity{
+public class Contact extends BaseIdEntity {
 
-	//性别
+	/**
+	 * 姓名
+	 */
 	private String name;
-	//性别
+	/**
+	 * 性别
+	 */
 	private String sex;
-	
-	//职位
+
+	/**
+	 * 职位
+	 */
 	private String position;
-	//联系电话
+	/**
+	 * 联系电话
+	 */
 	private String tel;
-	
-	//手机
+
+	/**
+	 * 手机
+	 */
 	private String mobile;
-	//备注
+	/**
+	 * 备注
+	 */
 	private String memo;
-	
-	//隶属于那个客户
+
+	/**
+	 * 隶属于那个客户
+	 */
 	private Customer customer;
 
 	public String getName() {

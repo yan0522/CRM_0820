@@ -6,18 +6,28 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Role extends IdEntity implements Serializable{
+public class Role extends BaseIdEntity implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	// 角色名称
+	/**
+	 * 角色名称
+	 */
 	private String name;
-	// 角色描述
+	/**
+	 * 角色描述
+	 */
 	private String description;
-	// 角色状态: 角色是否可用
+	/**
+	 * 角色状态: 角色是否可用
+	 */
 	private boolean enabled;
-	// 角色拥有的权限
+	/**
+	 * 角色拥有的权限
+	 */
 	private List<Authority> authorities = new ArrayList<>();
-	//该角色分配给了哪些用户
+	/**
+	 * 该角色分配给了哪些用户
+	 */
 	private Set<User> users = new HashSet<>();
 
 	public String getName() {

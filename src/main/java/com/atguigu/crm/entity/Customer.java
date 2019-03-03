@@ -3,66 +3,112 @@ package com.atguigu.crm.entity;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Customer extends IdEntity{
+public class Customer extends BaseIdEntity {
 
-	//客户编号
+	/**
+	 * 客户编号
+	 */
 	private String no;
-	//姓名
+	/**
+	 * 姓名
+	 */
 	private String name;
-	
-	//区域
+
+	/**
+	 * 区域
+	 */
 	private String region;
-	//客户经理
+	/**
+	 * 客户经理
+	 */
 	private Contact manager;
-	
-	//客户等级
+
+	/**
+	 * 客户等级
+	 */
 	private String level;
-	
-	//客户满意度
+
+	/**
+	 * 客户满意度
+	 */
 	private String satify;
-	
-	//客户信用度
+
+	/**
+	 * 客户信用度
+	 */
 	private String credit;
-	
-	//客户地址
+
+	/**
+	 * 客户地址
+	 */
 	private String address;
-	//邮编
+	/**
+	 * 邮编
+	 */
 	private String zip;
-	
-	//联系电话
+
+	/**
+	 * 联系电话
+	 */
 	private String tel;
-	//客户传真
+	/**
+	 * 客户传真
+	 */
 	private String fax;
-	
-	//网址
+
+	/**
+	 * 网址
+	 */
 	private String websit;
-	//执照注册号
+	/**
+	 * 执照注册号
+	 */
 	private String licenceNo;
-	
-	//法人
+
+	/**
+	 * 法人
+	 */
 	private String chief;
-	//注册资金
+	/**
+	 * 注册资金
+	 */
 	private Long bankroll;
-	
-	//年营业额
+
+	/**
+	 * 年营业额
+	 */
 	private Long turnover;
-	//开户行
+	/**
+	 * 开户行
+	 */
 	private String bank;
-	
-	//银行账号
+
+	/**
+	 * 银行账号
+	 */
 	private String bankAccount;
-	//地税登记号
+	/**
+	 * 地税登记号
+	 */
 	private String localTaxNo;
-	
-	//国税登记号
+
+	/**
+	 * 国税登记号
+	 */
 	private String nationalTaxNo;
-	//客户状态
+	/**
+	 * 客户状态
+	 */
 	private String state;
-	
-	//联系人信息
+
+	/**
+	 * 联系人信息
+	 */
 	private Set<Contact> contacts = new HashSet<>();
-	
-	//订单信息
+
+	/**
+	 * 订单信息
+	 */
 	private Set<Order> orders = new HashSet<>();
 
 	public String getNo() {

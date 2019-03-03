@@ -1,21 +1,33 @@
 package com.atguigu.crm.entity;
 
 
-public class Product extends IdEntity {
+public class Product extends BaseIdEntity {
 
-	// 产品名称
+	/**
+	 * 产品名称
+	 */
 	private String name;
-	// 产品型号
+	/**
+	 * 产品型号
+	 */
 	private String type;
 
-	// 产品批次
+	/**
+	 * 产品批次
+	 */
 	private String batch;
-	// 产品单位
+	/**
+	 * 产品单位
+	 */
 	private String unit;
 
-	// 单价
+	/**
+	 * 单价
+	 */
 	private int price;
-	// 备注
+	/**
+	 * 备注
+	 */
 	private String memo;
 
 	public String getName() {
