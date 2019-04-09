@@ -10,6 +10,8 @@ package com.atguigu.crm.entity;
 public class test11111 {
     public static  void main(String[] args) {
         String str = "";
+        String strs = "";
+
         System.out.println("============");
     }
 }
