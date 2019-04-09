@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Authority extends BaseIdEntity implements Serializable {
-
+    //随便修改
     private static final long serialVersionUID = 1L;
     /**
      * 权限的名字, 用于显示。
