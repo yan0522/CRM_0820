@@ -9,7 +9,7 @@ public class Authority extends BaseIdEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
     /**
-     * 权限的名字, 用于显示
+     * 权限的名字, 用于显示。
      */
     private String displayName;
     /**
