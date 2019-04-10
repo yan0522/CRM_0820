@@ -35,7 +35,7 @@
 
 
 
-<form action="${ctp}/login" method="post">
+<form action="${ctp}/user/login" method="post">
 
 	<TABLE WIDTH=800 BORDER=0 CELLPADDING=0 CELLSPACING=0>
 		<TR>
@@ -103,7 +103,7 @@
 							用户名
 						</th>
 						<td>
-							<input type="text" name="username" />
+							<input type="text" name="name" />
 						</td>
 					</tr>
 					<tr>
