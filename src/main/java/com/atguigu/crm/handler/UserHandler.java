@@ -1,14 +1,19 @@
 package com.atguigu.crm.handler;
 
 import com.atguigu.crm.entity.User;
+import com.atguigu.crm.orm.Navigation;
 import com.atguigu.crm.service.UserService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * TODO
@@ -20,7 +25,7 @@ import javax.servlet.http.HttpSession;
 @RequestMapping(value = "/user")
 @Controller
 public class UserHandler {
-
+    public static Logger logger = Logger.getLogger(UserHandler.class);
     @Autowired
     private UserService userService;
 
@@ -28,15 +33,20 @@ public class UserHandler {
     public String login (@RequestParam(value = "name") String name,
                          @RequestParam(value = "password") String password,
                          HttpSession session){
-        System.out.println("4444444444444444444");
         User user = userService.login(name ,password);
-        System.out.println("555555555555555555555");
         if (user != null){
-            System.out.println("66666666666666666");
             session.setAttribute("user",user);
-            System.out.println("777777777777777777");
-            return "success";
+            return "/home/success";
         }
-        return "redirect:/index.jsp";
+        return "redirect:/index";
+    }
+
+    @ResponseBody
+    @RequestMapping("/navigate")
+    public List<Navigation> navigate(){
+        List<Navigation> navigations = new ArrayList<Navigation>();
+        Navigation top = new Navigation(Long.MAX_VALUE,"客户关系管理系统");
+        navigations.add(top);
+        return navigations;
     }
 }

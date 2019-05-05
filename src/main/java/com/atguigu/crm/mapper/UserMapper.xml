@@ -3,11 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.atguigu.crm.mapper.UserMapper">
-
     <select id="getUserByName" parameterType="string" resultType="com.atguigu.crm.entity.User">
-        select id,name,password,enabled
-        from USERS
-        where name =#{name}
+        select u.id,u.name,u.password,u.enabled,r.name as "role.name"
+        from USERS u
+        LEFT outer join ROLES r on u.ROLE_ID = r.ID
+        where u.name =#{name}
     </select>
 </mapper>
 

@@ -8,9 +8,8 @@ import org.apache.ibatis.annotations.Param;
  *
  * @InterfaceName: UserMapper
  * @author: yan
- * @since: 2019/4/10 14:26
+ * @since: 2019/4/11 8:46
  */
 public interface UserMapper {
-
-    public User getUserByName(@Param(value="name") String name);
+    User getUserByName(@Param(value="name") String name);
 }
