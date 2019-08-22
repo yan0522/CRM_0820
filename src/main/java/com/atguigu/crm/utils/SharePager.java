@@ -18,43 +18,44 @@ public class SharePager {
     /**
      * 默认构造函数
      */
-    public SharePager()
-    {
+    public SharePager() {
 
     }
 
-    /**默认每页10行
+    /**
+     * 默认每页10行
+     *
      * @param totalRows
      */
-    public SharePager(int totalRows)
-    {
+    public SharePager(int totalRows) {
         this.totalRows = totalRows;
 
-        totalPages =(int) Math.ceil((double)totalRows / (double)pageSize);
+        totalPages = (int) Math.ceil((double) totalRows / (double) pageSize);
         startRow = 0;
     }
 
 
-    /**可自定义每页显示多少页
+    /**
+     * 可自定义每页显示多少页
+     *
      * @param totalRows
      * @param pageSize
      */
-    public SharePager(int totalRows, int pageSize)
-    {
+    public SharePager(int totalRows, int pageSize) {
         this.totalRows = totalRows;
         this.pageSize = pageSize;
-        if(this.pageSize<1)
-            this.pageSize=1;
-        else if(pageSize>20)
-            this.pageSize=20;
+        if (this.pageSize < 1) {
+            this.pageSize = 1;
+        } else if (pageSize > 20) {
+            this.pageSize = 20;
+        }
 
 //        if(this.pageSize>totalRows){
 //        	this.pageSize=(int)totalRows;
 //        }
 
 
-
-        totalPages =(int) Math.ceil((double)totalRows / (double)this.pageSize);
+        totalPages = (int) Math.ceil((double) totalRows / (double) this.pageSize);
         currentPage = 1;
         startRow = 0;
     }
@@ -62,8 +63,7 @@ public class SharePager {
     /**
      * 跳转到首页
      */
-    public void first()
-    {
+    public void first() {
         this.currentPage = 1;
         this.startRow = 0;
     }
@@ -71,111 +71,94 @@ public class SharePager {
     /**
      * 跳转到上一页
      */
-    public void previous()
-    {
-        if (currentPage == 1)
-        {
+    public void previous() {
+        if (currentPage == 1) {
             return;
         }
         currentPage--;
-        startRow = (currentPage-1) * pageSize;
+        startRow = (currentPage - 1) * pageSize;
     }
 
     /**
      * 跳转到下一页
      */
-    public void next()
-    {
-        if (currentPage < totalPages)
-        {
+    public void next() {
+        if (currentPage < totalPages) {
             currentPage++;
         }
-        startRow = (currentPage-1) * pageSize;
+        startRow = (currentPage - 1) * pageSize;
     }
 
     /**
-     *	跳转到尾页
+     * 跳转到尾页
      */
-    public void last()
-    {
+    public void last() {
         this.currentPage = totalPages;
-        if(currentPage<1){
+        if (currentPage < 1) {
             currentPage = 1;
         }
-        this.startRow = (currentPage-1) * this.pageSize;
-        totalPages =(int) Math.ceil((double)totalRows / (double)this.pageSize);
+        this.startRow = (currentPage - 1) * this.pageSize;
+        totalPages = (int) Math.ceil((double) totalRows / (double) this.pageSize);
 
     }
 
     /**
      * 跳转到指定页
-     * @param currentPage	指定的页
+     *
+     * @param currentPage 指定的页
      */
-    public void refresh(int currentPage)
-    {
+    public void refresh(int currentPage) {
 
-        if(currentPage < 0)
-        {
+        if (currentPage < 0) {
             first();
         }
-        if (currentPage > totalPages)
-        {
+        if (currentPage > totalPages) {
             last();
-        }else{
+        } else {
             this.currentPage = currentPage;
-            this.startRow = (currentPage-1) * this.pageSize;
+            this.startRow = (currentPage - 1) * this.pageSize;
         }
 
     }
 
 
-    public int getStartRow()
-    {
+    public int getStartRow() {
         return startRow;
     }
 
-    public int getTotalPages()
-    {
+    public int getTotalPages() {
         return totalPages;
     }
 
-    public int getCurrentPage()
-    {
+    public int getCurrentPage() {
         return currentPage;
     }
 
-    public int getPageSize()
-    {
+    public int getPageSize() {
         return pageSize;
     }
 
-    public void setTotalRows(int totalRows)
-    {
+    public void setTotalRows(int totalRows) {
         this.totalRows = totalRows;
     }
 
-    public void setStartRow(int startRow)
-    {
+    public void setStartRow(int startRow) {
         this.startRow = startRow;
     }
 
-    public void setTotalPages(int totalPages)
-    {
+    public void setTotalPages(int totalPages) {
         this.totalPages = totalPages;
     }
 
-    public void setCurrentPage(int currentPage)
-    {
+    public void setCurrentPage(int currentPage) {
         this.currentPage = currentPage;
     }
 
-    public void setPageSize(int pageSize)
-    {
+    public void setPageSize(int pageSize) {
         this.pageSize = pageSize;
     }
 
-    public int getTotalRows()
-    {
+    public int getTotalRows() {
         return totalRows;
     }
 }
